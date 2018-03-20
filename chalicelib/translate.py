@@ -24,23 +24,28 @@ available_languages = client.get_languages()
 
 
 def translate(text, num_translations):
-    language_chain = [{"lang": "en", "text": text}]
+    language_chain = [
+            {"language": { "code": "en", "name": "English" }, "text": text}
+    ]
     for _ in range(num_translations):
+        new_lang = get_random_language()
         language_chain.append({
-            "lang": get_random_language_code(language_chain)
+            "language": { "code": new_lang["language"], "name": new_lang["name"] }
         })
-    language_chain.append({"lang": "en"})
+
+    language_chain.append({"language": { "code": "en", "name": "English" }})
 
     for i in range(1, len(language_chain)):
         src_text = language_chain[i-1]["text"]
-        src_lang = language_chain[i-1]["lang"]
-        dst_lang = language_chain[i]["lang"]
+        src_lang = language_chain[i-1]["language"]["code"]
+        dst_lang = language_chain[i]["language"]["code"]
         translation = client.translate(src_text, source_language=src_lang, target_language=dst_lang)
         language_chain[i]["text"] = translation["translatedText"]
     return language_chain
 
-def get_random_language_code(excluded):
-    choice = random.choice(available_languages)["language"]
-    while choice in excluded:
-        choice = random.choice(available_languages)["language"]
+def get_random_language():
+    choice = random.choice(available_languages)
+    while choice["language"] == "en":
+        choice = random.choice(available_languages)
+    return choice
     return choice
