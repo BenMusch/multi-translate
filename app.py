@@ -2,7 +2,7 @@ import logging
 
 from chalice import Chalice
 
-import translate
+from chalicelib import translate
 
 
 app = Chalice(app_name='multi-translate')
