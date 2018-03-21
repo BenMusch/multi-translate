@@ -6138,6 +6138,10 @@ vuetify@^1.0.0:
   version "1.0.9"
   resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/vuetify/-/vuetify-1.0.9.tgz#036f0c97aaba452ec4bdfb87c4c69448db46af74"
 
+vuex@^3.0.1:
+  version "3.0.1"
+  resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/vuex/-/vuex-3.0.1.tgz#e761352ebe0af537d4bb755a9b9dc4be3df7efd2"
+
 watchpack@^1.4.0:
   version "1.5.0"
   resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/watchpack/-/watchpack-1.5.0.tgz#231e783af830a22f8966f65c4c4bacc814072eed"

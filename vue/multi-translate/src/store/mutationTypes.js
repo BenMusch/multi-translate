@@ -1,0 +1,4 @@
+export const SET_LOADING = "SET_LOADING"
+export const SET_TRANSLATION = "SET_TRANSLATION"
+export const SET_ERROR_MESSAGE = "SET_ERROR_MSG"
+export const START_EDITING = "START_EDITING"

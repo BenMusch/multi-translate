@@ -12,12 +12,8 @@ app.log.setLevel(logging.DEBUG)
 def index():
     return translate.available_languages
 
-@app.route("/translate", methods=["POST"])
+@app.route("/translate", methods=["POST"], cors=True)
 def perform_translation():
     request_data = app.current_request.json_body
-    try:
-        result = translate.translate(request_data["text"], 10)
-        return result
-    except Exception as e:
-        app.log.error(e)
-        return ""
+    result = translate.translate(request_data["text"], int(request_data["numTranslations"]))
+    return result

@@ -24,7 +24,8 @@
 </template>
 
 <script>
-import axios from 'axios'
+import translateHelpers from '../helpers/translate'
+import { SET_ERROR_MESSAGE, SET_TRANSLATION, SET_LOADING } from '../store/mutationTypes'
 
 export default {
   name: 'TranslateForm',
@@ -37,7 +38,10 @@ export default {
 
   methods: {
     submit() {
-      console.log(this.text, this.languageCount)
+      translateHelpers.translatePhrase(this.text, this.languageCount)
+        .then(response => this.$store.commit(SET_TRANSLATION, { translation: response.data }))
+        .catch(console.log)
+      this.$store.commit(SET_LOADING)
     }
   }
 }
