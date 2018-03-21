@@ -1,7 +1,7 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="pt-4 pb-4 pl-4 pr-4">
     <h1>Create your translation</h1>
-    <v-form @submit.prevent="submit">
+    <v-form @submit.prevent="submit" class="mt-2">
       <v-text-field
         name="text"
         label="Text to translate"
@@ -18,7 +18,7 @@
         v-model="languageCount"
         :full-width="false"
       ></v-text-field>
-      <v-btn @click.prevent="submit">Translate</v-btn>
+      <v-btn @click.prevent="submit" color="info">Translate</v-btn>
     </v-form>
   </v-container>
 </template>
