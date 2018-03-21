@@ -5,6 +5,12 @@
         <v-layout justify-center class="mt-3">
           <v-flex xs16 sm12 md8>
             <v-card>
+              <v-alert
+                :value="$store.getters.hasError"
+                color="error"
+              >
+                {{ $store.getters.error }}
+              </v-alert>
               <div v-if="isLoading" class="pt-5 pb-5 mx-auto">
                 <v-layout justify-center>
                   <v-progress-circular indeterminate :size="50" color="blue"></v-progress-circular>

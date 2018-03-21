@@ -40,7 +40,7 @@ export default {
     submit() {
       translateHelpers.translatePhrase(this.text, this.languageCount)
         .then(response => this.$store.commit(SET_TRANSLATION, { translation: response.data }))
-        .catch(console.log)
+        .catch(error => this.$store.commit(SET_ERROR_MESSAGE, { message: error.response.data.Message }))
       this.$store.commit(SET_LOADING)
     }
   }
