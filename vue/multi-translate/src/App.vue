@@ -36,6 +36,11 @@
                 I personally cover all of the costs to host this application.
                 Any help is appreciated!
               </span>
+              <br>
+              <br>
+              <a href="https://github.com/benmusch/multi-translate" target="_blank">
+                <v-icon>fab fa-github</v-icon>
+              </a>
             </center>
           </v-flex>
         </v-layout>
