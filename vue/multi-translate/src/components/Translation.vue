@@ -26,7 +26,7 @@ import { RESET_TRANSLATION } from '../store/mutationTypes'
 export default {
   computed: {
     translationChain() {
-      return this.$store.getters.translation
+      return this.$store.getters.translation.reverse()
     },
   },
   methods: {
