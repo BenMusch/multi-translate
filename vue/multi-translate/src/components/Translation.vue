@@ -13,7 +13,7 @@
         <div slot="header">{{translation.language.name}}</div>
         <v-card>
           <v-card-text :class="i == 0 ? 'headline' : 'subtitle'"
-             v-text="translation.text"></v-card-text>
+             v-html="translation.text"></v-card-text>
         </v-card>
       </v-expansion-panel-content>
     </v-expansion-panel>

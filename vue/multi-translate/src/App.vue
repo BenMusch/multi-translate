@@ -4,6 +4,12 @@
       <v-container>
         <v-layout justify-center class="mt-3">
           <v-flex xs16 sm12 md8>
+            <div class="mb-4">
+              <center>
+                <h1 class="display-1 grey--text text--darken-3">Multi Translator</h1>
+                <p class="subheading grey--text text--darken-1">Run your phrase through multiple languages in Google Translate</p>
+              </center>
+            </div>
             <v-card>
               <v-alert
                 :value="$store.getters.hasError"
@@ -32,7 +38,7 @@
               <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
               <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/BSPKn39"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
               <br>
-              <span class="caption">
+              <span class="caption grey--text text--darken-1">
                 I personally cover all of the costs to host this application.
                 Any help is appreciated!
               </span>
