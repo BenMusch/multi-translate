@@ -38,11 +38,16 @@ export default {
 
   methods: {
     submit() {
+      const getErrorMessage = (e) => {
+        if (e.response.data && e.response.data.Message) {
+          return e.response.data.Message
+        } else {
+          return "An unknown error occurred"
+        }
+      }
       translateHelpers.translatePhrase(this.text, this.languageCount)
         .then(response => this.$store.commit(SET_TRANSLATION, { translation: response.data }))
-        .catch(error => this.$store.commit(SET_ERROR_MESSAGE, {
-          message: error.response.data.Message || "An unknown error occurred"
-        }))
+        .catch(e => this.$store.commit(SET_ERROR_MESSAGE, { message: getErrorMessage(e) }))
       this.$store.commit(SET_LOADING)
     }
   }
