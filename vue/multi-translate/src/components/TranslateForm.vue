@@ -39,7 +39,7 @@ export default {
   methods: {
     submit() {
       const getErrorMessage = (e) => {
-        if (e.response.data && e.response.data.Message) {
+        if (e.response && e.response.data && e.response.data.Message) {
           return e.response.data.Message
         } else {
           return "An unknown error occurred"
