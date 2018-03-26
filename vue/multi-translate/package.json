@@ -8,7 +8,8 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "deploy": "aws s3 cp ./dist s3://multi-translate  --recursive --exclude '*.DS_Store' --acl public-read --cache-control public,max-age=604800 upload: dist/index.html to s3://multi-translate/index.html"
   },
   "dependencies": {
     "axios": "^0.18.0",
