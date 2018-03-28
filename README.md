@@ -1,6 +1,6 @@
 # Multi Translator
 
-![Screenshot of website](https://www.dropbox.com/s/4h1nquweof373h9/mult-translate-screenshot.png?dl=1)
+![Screenshot of website](https://s3.amazonaws.com/bens-general-stuff/mult-translate-screenshot.png)
 
 
 This application runs a given phrase through multiple languages in Google
