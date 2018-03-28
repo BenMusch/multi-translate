@@ -14,7 +14,6 @@
         name="languageCount"
         label="Number of languages to translate through"
         type="number"
-        placeholder="5"
         v-model="languageCount"
         :full-width="false"
       ></v-text-field>
@@ -32,7 +31,7 @@ export default {
   data() {
     return {
       text: "",
-      languageCount: ""
+      languageCount: 5
     }
   },
 
